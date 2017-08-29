@@ -504,7 +504,7 @@ background-color: rgba(255, 255, 255, 0.55);
 			height:8.5vh;	
 		}
 
-		footer{
+		.device-footer{
 			margin-top: 1.5vh;
 		}
 
@@ -617,7 +617,7 @@ background-color: rgba(255, 255, 255, 0.55);
 			padding-left: 3vw;
 		}
 
-		footer{
+		.device-footer{
 			height: 7vh;
 			text-align: center;
 		}
