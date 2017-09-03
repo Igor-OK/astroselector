@@ -35,8 +35,6 @@ body {
 
 .navbar-brand:hover,
 .navbar-brand:focus{
-	//font-size:195%;
-	//font-weight: bold;
 	color:#fff;
 	opacity: 1;
 	text-shadow: 0 0 .5em white,
@@ -480,6 +478,10 @@ background-color: rgba(255, 255, 255, 0.55);
 
 
 @media screen and (max-width: 768px) and (orientation: landscape){
+
+		body {
+			background-position-y: 40%;
+		}
 
 		.to-body {
 			width: 95vw;
