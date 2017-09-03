@@ -88,19 +88,6 @@ html, body {
     transform: translateZ(0);
 }
 
-.logo-img-finder{
-	width: 88%;
-    animation-name: spin;
-    animation-duration: 7777ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-
-}
 
 
 @keyframes spin {
@@ -118,7 +105,7 @@ html, body {
 	padding-left: 15px;
 	padding-right: 15px;
 	height: 170px;
-	opacity: 0.33;
+	opacity: 0.55;
 	-webkit-transition: opacity .3s ease-in-out, background .3s ease-in-out;
     -moz-transition: opacity .3s ease-in-out, background .3s ease-in-out;
     transition: opacity .3s ease-in-out, background .3s ease-in-out;
@@ -127,11 +114,8 @@ html, body {
 
 .way:hover{
 	opacity: 1;
-	background-color: rgba(48,55,83,0.33);
-	text-shadow: 0 0 .3em #303753,
-	         	 0 0 .7em #303753;	
-	box-shadow: 0 0 .5em #303753,
-	         	 0 0 .9em #303753;         	 
+	background-color: rgba(255,255,255,1);
+	color: #303753;	       	 
 }
 
 h3{
@@ -208,28 +192,28 @@ margin-bottom: 50px;
 
 @keyframes BtnAnimation
 {
-    from { background-color: rgba(119,255,148,0.5); 
+    from { background-color: rgba(255,255,255,0.5); 
 	        box-shadow: 0 0 .5em white,
 	    				0 0 1.1em white;  
 	    	color: #4D599C;		
 	    	font-size: 120%;
 	    	transform: scale(1);}
 
-    50% { background-color: rgba(119,255,148,1); 
+    50% { background-color: rgba(255,255,255,1); 
     	    box-shadow: 0 0 .0em white,
 	    				0 0 .0em white;  
 	    	color: #442958;		
 	    	font-size: 110%;
 	    	    	transform: scale(0.95);}
 
-    70% { background-color: rgba(119,255,148,1); 
+    70% { background-color: rgba(255,255,255,1); 
     	    box-shadow: 0 0 .0em white,
 	    				0 0 .0em white;  
 	    	color: #442958;		
 	    	font-size: 110%;
 	    	    	transform: scale(0.95);}
 
-    to { background-color: rgba(119,255,148,0.5); 
+    to { background-color: rgba(255,255,255,0.5); 
     	    box-shadow: 0 0 .5em white,
 	    				0 0 1.1em white;  
 	    	color: #4D599C;		
@@ -489,6 +473,11 @@ background-color: rgba(255, 255, 255, 0.55);
 		body {
 			background-image: url(../img/meandyou2.jpg);
 		}
+
+		.logo-img{
+		width: 33%;
+		}
+	
 
 		.to-body {
 			width: 95vw;

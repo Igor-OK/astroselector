@@ -96,7 +96,7 @@
     <div class="row">
 
       <div class="col-md-8 col-md-offset-2">
-         <h3 class="helper-form-header wow bounceIn">Чтобы увидеть свой гороскоп отношений, заполните форму.</h3>
+         <h3 class="helper-form-header wow bounce">Чтобы увидеть свой гороскоп отношений, заполните форму.</h3>
      
 
 <form name="USER" class="form-horizontal">
@@ -289,10 +289,11 @@ function ActiveButton (){  // function for activating of the btn
     enable_btn = true;
     if (HeaderFromThis === 1){
       FormHeader.innerText = 'Загружены данные последней сессии.';
-      FormHeader.style.color= '#77FF94';}
+      FormHeader.style.textShadow = '0 0 .7em white';
+    }
     if (HeaderFromThis === 2){
       FormHeader.innerText = 'Данные внесены успешно.';
-      FormHeader.style.color= '#77FF94';
+      FormHeader.style.textShadow = '0 0 .7em white';
     }
 
   }
@@ -301,7 +302,7 @@ function ActiveButton (){  // function for activating of the btn
     SentBtn.style.cursor = '';
     enable_btn = false;
     FormHeader.innerText = 'Чтобы увидеть свой гороскоп отношений, заполните форму.';
-    FormHeader.style.color= '#fff';
+    FormHeader.style.textShadow = '';
     HeaderFromThis = 2;
   }
 }
@@ -332,13 +333,15 @@ NameField.onblur=NameValid;
 function NameValid(){
   var Check_name = /\S+/;
   if (Check_name.test(NameField.value)){
-    NameField.style.backgroundColor = '#77FF94';
-    BName.style.color = '#77FF94';
+    NameField.style.backgroundColor = 'transparent';
+    NameField.style.color = '#fff';
+    BName.style.textShadow = '0 0 .7em white';
     name_val = true;
   }
   else{
     NameField.style.backgroundColor = 'white';
-    BName.style.color = 'white';
+    NameField.style.color = '#303753';
+    BName.style.textShadow = '';
     name_val = false;   
   }
   ActiveButton();
@@ -360,18 +363,18 @@ function SexValid(){
 
 if (SexRadio.value == 'М'){
   label_sex_m.style.opacity = 1;
-  label_sex_fem.style.opacity = 0.17;  
-  label_sex_m.style.color = '#77FF94';
+  label_sex_fem.style.opacity = 0.333;  
+  label_sex_m.style.textShadow = '0 0 .7em white';
   label_sex_fem.style.color = 'white';
-  BSex.style.color = '#77FF94';
+  BSex.style.textShadow = '0 0 .7em white';
   sex_val = true;
 }
 if (SexRadio.value == 'Ж'){
-  label_sex_m.style.opacity = 0.17;
+  label_sex_m.style.opacity = 0.33;
   label_sex_fem.style.opacity = 1; 
-  label_sex_fem.style.color = '#77FF94';
+  label_sex_fem.style.textShadow = '0 0 .7em white';
   label_sex_m.style.color = 'white';
-  BSex.style.color = '#77FF94';
+  BSex.style.textShadow = '0 0 .7em white';
   sex_val = true;
 }
 ActiveButton();
@@ -390,19 +393,19 @@ function DateValid(){
     //==========SOME EXTRA CODE should be here about special month 
     var Check_date_arr = DateField.value.split('.');
     if((Number(Check_date_arr[0]) <= 31) && (Number(Check_date_arr[1]) <= 12) && (Number(Check_date_arr[2]) > 1961) && ( Number(Check_date_arr[2]) < 2002)){
-      DateField.style.backgroundColor = '#77FF94';
-      BDate.style.color = '#77FF94';
+      DateField.style.backgroundColor = 'transparent';
+      BDate.style.textShadow = '0 0 .7em white';
       date_val = true;
     }
     else{
       DateField.style.backgroundColor = 'white';
-      BDate.style.color = 'white';
+      BDate.style.textShadow = '';
       date_val = false;
     }
   }
   else{
      DateField.style.backgroundColor = 'white';
-     BDate.style.color = 'white';
+     BDate.style.textShadow = '';
      date_val = false;
   }
   ActiveButton();
@@ -459,18 +462,22 @@ function ETimeValid(){
     if (Check_time.test(ExactTimeField.value)){
        var Check_time_arr = ExactTimeField.value.split('.');
        if((Number(Check_time_arr[0]) <=23) && (Number(Check_time_arr[1]) <=59)){
-        ExactTimeField.style.backgroundColor = '#77FF94';
-        TimeLabelTrue.style.color = '#77FF94';
-        BTime.style.color = '#77FF94';
+        ExactTimeField.style.textShadow = '0 0 .7em white';
+        TimeLabelTrue.style.textShadow = '0 0 .7em white';
+        BTime.style.textShadow = '0 0 .7em white';
         time_val = true;
        }
        else{
-        ExactTimeField.style.backgroundColor = 'white';
+        ExactTimeField.style.textShadow = '';
+        TimeLabelTrue.style.textShadow = '';
+        BTime.style.textShadow = '';
         time_val = false;       
        }
     }
      else{
-      ExactTimeField.style.backgroundColor = 'white';  
+        ExactTimeField.style.textShadow = '';
+        TimeLabelTrue.style.textShadow = '';
+        BTime.style.textShadow = '';
       time_val = false;      
      }
      ActiveButton();
@@ -481,18 +488,22 @@ function MTimeValid(){
     if (Check_time.test(MidleTimeField.value)){
        var Check_time_arr = MidleTimeField.value.split('.');
        if((Number(Check_time_arr[0]) <=23) && (Number(Check_time_arr[1]) <=59)){
-        MidleTimeField.style.backgroundColor = '#77FF94';
-        TimeLabelFalse.style.color = '#77FF94';
-        BTime.style.color = '#77FF94';
+        MidleTimeField.style.textShadow = '0 0 .7em white';
+        TimeLabelFalse.style.textShadow = '0 0 .7em white';
+        BTime.style.textShadow = '0 0 .7em white';
         time_val = true;
        }
        else{
-        MidleTimeField.style.backgroundColor = 'white';  
+        MidleTimeField.style.textShadow = '';
+        TimeLabelFalse.style.textShadow = '';
+        BTime.style.textShadow = ''; 
         time_val = false;      
        }
     }
      else{
-      MidleTimeField.style.backgroundColor = 'white'; 
+        MidleTimeField.style.textShadow = '';
+        TimeLabelFalse.style.textShadow = '';
+        BTime.style.textShadow = ''; 
       time_val = false;       
      }
      ActiveButton();
@@ -513,7 +524,7 @@ var bel_cities = [{city:"Минск", value:"Минск"}, {city:"Брест", v
 
 function CountryValid(){
   if (CountrySelect.value != ""){
-    CountrySelect.style.backgroundColor = '#77FF94';
+    CountrySelect.style.backgroundColor = 'transparent';
     country_val = true;
   }
   if (CountrySelect.value == "Беларусь"){
@@ -533,8 +544,8 @@ function CountryValid(){
 
 function CityValid(){
   if (CitySelect.value != ""){
-    CitySelect.style.backgroundColor = '#77FF94';
-    BPlace.style.color = '#77FF94';
+    CitySelect.style.backgroundColor = 'transparent';
+    BPlace.style.textShadow = '0 0 .7em white';
     city_val = true;
   }
   ActiveButton();
