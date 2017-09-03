@@ -4,10 +4,10 @@ body {
 	color:#fff;
 	background-image: url(../img/meandyou1.jpg);
 	background-color:#ccc;
-	-webkit-background-size:100% auto;
-	-moz-background-size:100% auto;
-	-o-background-size:100% auto;	
-	background-size: 100% auto;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;	
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-y: 60%;
 	background-position-x: center;	
@@ -567,13 +567,6 @@ background-color: rgba(255, 255, 255, 0.55);
 
 @media screen and (min-width:320px) and (max-width:768px) and (orientation: portrait) {
 
-
-		body {
-			-webkit-background-size:auto 100%;
-			-moz-background-size:auto 100%;
-			-o-background-size:auto 100%;	
-			background-size:auto 100%;
-		}
 
 		.to-body {
 			width: 98vw;
