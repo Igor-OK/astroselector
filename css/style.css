@@ -3,13 +3,12 @@ body {
     font-weight: normal;
 	color:#fff;
 	background-image: url(../img/meandyou1.jpg);
-	background-color:#ccc;
+	background-color:#3A3C62;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;	
 	background-size: cover;
-	background-position-y: 60%;
-	background-position-x: center;	
+	background-position: center center;	
 	background-attachment: fixed;
 }
 
@@ -479,7 +478,9 @@ background-color: rgba(255, 255, 255, 0.55);
 @media screen and (max-width: 768px) and (orientation: landscape){
 
 		body {
-			background-position-y: 40%;
+			//background-position-y: 40%;
+			//background-image: none;
+			background-image: url(../img/meandyou2.jpg);
 		}
 
 		.to-body {
@@ -566,10 +567,9 @@ background-color: rgba(255, 255, 255, 0.55);
 
 @media screen and (min-width:320px) and (max-width:768px) and (orientation: portrait) {
 
-body{
-	background-attachment: scroll;
-}
-
+		body{
+			background-image: none;
+		}
 
 		.to-body {
 			width: 98vw;
