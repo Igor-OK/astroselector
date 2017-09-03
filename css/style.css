@@ -8,7 +8,6 @@ body {
 	-moz-background-size:cover;
 	-o-background-size:cover;	
 	background-size: cover;
-	background-repeat: no-repeat;
 	background-position-y: 60%;
 	background-position-x: center;	
 	background-attachment: fixed;
@@ -566,6 +565,10 @@ background-color: rgba(255, 255, 255, 0.55);
 
 
 @media screen and (min-width:320px) and (max-width:768px) and (orientation: portrait) {
+
+body{
+	background-attachment: scroll;
+}
 
 
 		.to-body {
