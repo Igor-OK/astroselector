@@ -189,6 +189,10 @@ margin-bottom: 50px;
 	font-weight: normal;
 }
 
+.birth-male, .birth-female{
+	color:#fff;
+}
+
 
 @keyframes BtnAnimation
 {
