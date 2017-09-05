@@ -482,6 +482,13 @@ background-color: rgba(255, 255, 255, 0.55);
 		width: 33%;
 		}
 	
+		.way{
+			opacity: 1;
+			color: #303753;
+			background-color: #fff;
+			margin: 26px 33px;
+
+		}
 
 		.to-body {
 			width: 95vw;
@@ -577,6 +584,16 @@ background-color: rgba(255, 255, 255, 0.55);
 			background-position-y: bottom;	
 			background-position-x: left;
 		}
+
+		.way{
+			opacity: 1;
+			color: #303753;
+			background-color: #fff;
+			margin: 26px 33px;
+
+		}
+
+
 
 		.navbar-toggle .icon-bar{
 			background-color: white;
