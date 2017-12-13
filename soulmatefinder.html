@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="theme-color" content="#752076">
     <title>Астроселектор - как найти любовь.</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -79,13 +80,13 @@
   <div class="container">
     <div class="row">
     <h3 class="shadow wow bounceIn">Почему стоит попробовать?</h3>
-      <div class="col-md-4 main-feature wow fadeInUp"><i class="fa fa-cogs fa-3x" aria-hidden="true"></i><h4>Гибкая система настроек</h4><p>Система приоритетов, задаваемая Вами в сочетании с возможностью особых пожеланий дают потрясающий результат.</p></div>
-      <div class="col-md-4  main-feature wow fadeInUp"><i class="fa fa-user fa-3x" aria-hidden="true"></i><h4>Тот самый человечек</h4><p>Повстречать человека с таким уровнем совместимости в обычных условиях практически нереально.</p></div>
-      <div class="col-md-4  main-feature wow fadeInUp"><i class="fa fa-money fa-3x" aria-hidden="true"></i><h4>Это доступно</h4><p>Стоимость исследования составляет всего 26 белорусских рублей или 888 российских.</p></div>
+      <div class="col-md-4 main-feature wow fadeIn"><i class="fa fa-cogs fa-3x" aria-hidden="true"></i><h4>Гибкая система настроек</h4><p>Система приоритетов, задаваемая Вами в сочетании с возможностью особых пожеланий дают потрясающий результат.</p></div>
+      <div class="col-md-4  main-feature wow fadeIn"><i class="fa fa-user fa-3x" aria-hidden="true"></i><h4>Тот самый человечек</h4><p>Повстречать человека с таким уровнем совместимости в обычных условиях практически нереально.</p></div>
+      <div class="col-md-4  main-feature wow fadeIn"><i class="fa fa-money fa-3x" aria-hidden="true"></i><h4>Это доступно</h4><p>Стоимость исследования составляет всего 26 белорусских рублей или 888 российских.</p></div>
     </div> 
     <div class="row">   
-      <div class="col-md-4 col-md-offset-2  main-feature wow fadeInUp"><i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i><h4>Гарантия качества</h4><p>Если встреча с найденным человеком вас разочарует, Вы получите деньги назад в полном объёме. Инструкция по возврату - в письме с результатами.</p></div>
-      <div class="col-md-4  main-feature wow fadeInUp"><i class="fa fa-gift fa-3x" aria-hidden="true"></i><h4>Все сразу</h4><p>Счастливые годы жизни, проведенные с тем, с кем надо, тепло, взаимопонимание, уважение, радость, развитие, крепкая дружба и лучший интим - все в “одном фланоне”.</p></div>
+      <div class="col-md-4 col-md-offset-2  main-feature wow fadeIn"><i class="fa fa-handshake-o fa-3x" aria-hidden="true"></i><h4>Гарантия качества</h4><p>Если встреча с найденным человеком вас разочарует, Вы получите деньги назад в полном объёме. Инструкция по возврату - в письме с результатами.</p></div>
+      <div class="col-md-4  main-feature wow fadeIn"><i class="fa fa-gift fa-3x" aria-hidden="true"></i><h4>Все сразу</h4><p>Счастливые годы жизни, проведенные с тем, с кем надо, тепло, взаимопонимание, уважение, радость, развитие, крепкая дружба и лучший интим - все в “одном фланоне”.</p></div>
     </div>
     
   </div>
@@ -187,7 +188,7 @@
     <label for="inputBirthPlace" class="col-sm-3 control-label">Место рождения</label>
     <div class="col-sm-9">
       <div class="input-group">
-        <input type="text" class="form-control city-input" id="inputBirthPlace" placeholder="Название населенного пункта" aria-describedby="basic-addon2">
+        <input type="text" class="form-control city-input" id="inputBirthPlace" placeholder="Страна, область, город (поселок)">
         <span class="input-group-addon" id="basic-addon2"><a href="#" class="dashed map-pointing" data-point="city_name">Укажите на карте</a></span>
       </div>
     </div>
@@ -197,19 +198,20 @@
     <label for="inputNowPlace" class="col-sm-3 control-label">Место проживания</label>
     <div class="col-sm-9">
       <div class="input-group">
-        <input type="text" class="form-control" id="inputNowPlace" placeholder="Название населенного пункта" aria-describedby="basic-addon2">
+        <input type="text" class="form-control" id="inputNowPlace" placeholder="Страна, область, город (поселок)">
         <span class="input-group-addon" id="basic-addon2"><a href="#" class="dashed map-pointing" data-point="place_name">Укажите на карте</a></span>
       </div>
     </div>
   </div>
 
-<div id="map" class="col-sm-10 col-sm-offset-1"></div>
+<div id="map" class="col-md-12"></div>
 
-<br><hr>
+<br><br>
+<hr>
 
 <p>В алгоритм поиска по умолчанию включены социально-психологическая и интимная совместимости с классическими ролевыми моделями (мужчина в роли мужчины и женщина в роли женщины), уделено внимание взаимопониманию. Также исключены все варианты с самыми негативными и разрушительными моментами (на максимумах), которые только встречаются между людьми.</p>
 <p>Остальное будет сформировано исходя из обозначенных Вами приоритетов.</p>
-<p><strong>Настройки поиска.</strong> Распределите 17 звездочек по приведенным ниже качествам отношений (параметрам, качествам) в соответствии с вашими личными приоритетами, чем больше звездочек, тем важнее это для Вас.</p>
+<p><strong>Настройки поиска.</strong> Распределите 17 звездочек по приведенным ниже характеристикам отношений в соответствии с вашими личными приоритетами, чем больше звездочек, тем важнее это для Вас.</p>
 
 <br>
 
@@ -410,14 +412,15 @@
 
 
 <script src="js/wow.js"></script>
-              <script>
-              new WOW().init();
-              </script>
+
+<script>
+    new WOW().init();
+</script>
 
 
 
 <script>
-// lets build all stars in their places with needed classesЖ:
+// lets build all stars in their places with needed classes:
 
 //allstars
   var _stars = 17;
@@ -561,8 +564,6 @@ if ( num <= _stars + conStars ){ //decreasing of features doesn't work in this c
 
    _stars = _stars - num + conStars;
 
-
-
    allStars();
 //actualizing value of feature in current container
     if (cla[31] == "e"){emo_stars = num;}
@@ -572,10 +573,8 @@ if ( num <= _stars + conStars ){ //decreasing of features doesn't work in this c
     if (cla[31] == "c"){clear_stars = num;}
     if (cla[31] == "r"){respect_stars = num;}
     if (cla[31] == "t"){trust_stars = num;}
-
    }//end of if 
 }
-
 
 function allStars(){ // balancing of allstars
   for (var i = 0; i < starsContainer.children.length; i++) {
@@ -585,8 +584,6 @@ function allStars(){ // balancing of allstars
     starsContainer.children[j].style.opacity = 1;
   }
 }
-
-
 
 </script>
 
@@ -706,10 +703,10 @@ function profile_map() {
 
   $('body').on('click', '.finish-map', function(){
     if($('#map').data('mode') == 'city_name'){
-      $('#Profile_city_name').val( content );
+      $('#inputBirthPlace').val( content );
     }
     if($('#map').data('mode') == 'place_name'){
-      $('#Profile_place_name').val( content );
+      $('#inputNowPlace').val( content );
     }
     myMap.balloon.close();
     $('#map').slideUp();
