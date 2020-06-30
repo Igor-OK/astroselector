@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	Поздравляем, тебя нашла одна из твоих вторых половинок!</title>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,600,700|Roboto:400,500&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="img/favicon.png" />
+	<link href="css/lucky.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112167577-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112167577-1');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter47237679 = new Ya.Metrika({
+                        id:47237679,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/47237679" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+
+	<header>
+		<img src="img/sprite.svg#Astro" class="logo-img">
+	</header>
+
+	<div class="intro-wrapper">
+		<p class="intro">"Без любви жить легче. Но без неё нет смысла." - Лев Толстой</p>
+	</div>
+
+	<main>
+		<div class="pre-story" id="pre-story"></div>
+
+		
+
+		<div class="scene-wrapper">
+			<div id="scene" class="scene-container">
+				<div class="active-person-block">
+					<div id="a-avatar" class="a-person-avatar"></div>
+					<div class="a-natal-map map"></div>
+					<div class="a-person-name" id="name"></div>
+					<div class="a-birthday" id="birthday"></div>
+				</div>
+				<div class="analitics-block">
+
+					<div class="restart" id="restart">Посмотреть историю<br/> ещё&nbsp;раз</div>
+
+					<div class="equalizer">
+						<div class="columns">
+							<div class="column-wrapper">
+								<span class="column" id="indicator-1"></span>
+								<div class="column-head head-1"></div>
+							</div>
+							<div class="column-wrapper">
+								<span class="column" id="indicator-2"></span>
+								<div class="column-head head-2"></div>
+							</div>
+							<div class="column-wrapper">
+								<span class="column" id="indicator-3"></span>
+								<div class="column-head head-3"></div>
+							</div>
+							<div class="column-wrapper">
+								<span class="column" id="indicator-4"></span>
+								<div class="column-head head-4"></div>
+							</div>
+							<div class="column-wrapper">
+								<span class="column" id="indicator-5"></span>
+								<div class="column-head head-5"></div>
+							</div>
+							<div class="column-wrapper">
+								<span class="column" id="indicator-6"></span>
+								<div class="column-head head-6"></div>
+							</div>
+							<div class="column-wrapper">
+								<span class="column" id="indicator-7"></span>
+								<div class="column-head head-7"></div>
+							</div>
+						</div>
+
+						<div id="values-legend">
+							<span class="value-item">Отлично</span>
+							<span class="value-item">Хорошо</span>
+							<span class="value-item">Норма</span>
+							<span class="value-item">Плохо</span>
+							<span class="value-item">Ужасно</span>
+						</div>
+						<br/>
+					</div>
+				</div>
+
+				<div class="searched-person-block">
+					<div id="s-avatar" class="s-person-avatar"></div>
+					<div class="map" id="s-natal-map"></div>
+					<div id="status-block" class="pulsate s-person-name">Идёт поиск <br/> и анализ ...</div>
+					<div class="s-birthday" id="search-counter">
+						<span id="days" class="birthday-item"></span>
+						<span id="month" class="birthday-item month"></span>
+						<span id="years" class="birthday-item"></span>
+					</div>
+				</div>
+
+				<div class="time-scale-block">
+					<div id="scale" class="scale">
+						<div id="zoomer" class="zoomer">
+							<div class="zoomer-glass"></div>
+							<div class="zoomer-hand"></div>
+						</div>
+					</div>
+					<div id="years-ticks" class="years-ticks"></div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<footer class="after-story">
+		<p>Астроселектор - авторский проект, цель которого - помогать людям находить самых подходящих партнёров из всех современников.</p>
+		<p>В основе - личный опыт автора, 8 лет изучения, 5 из которых - консультирование, фундаментальные труды по астрологической совместимоти разных авторов, компьютерные алгоритмы и современные вычислительные мощности, успешный опыт подбора людей для производительных команд с чудесным микроклиматом в 3 организациях Минска в сфере торговли и IT.</p>
+	</footer>
+
+</body>
+</html>
+
+<script src="js/lucky.js"></script>
+
+

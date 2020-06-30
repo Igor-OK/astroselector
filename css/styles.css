@@ -1,0 +1,172 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.progress-load {
+	display: inline-block;
+	background-color: green;
+	width: 0vw;
+	height: 5px;
+	margin-top: 20px;
+}
+
+#native-data {
+	width: calc(100% - 20px);
+	margin: 10px;
+}
+
+h3 {
+	text-align: center;
+	margin: 5px;
+}
+
+.user-cuspides {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.cuspide {
+	display: inline-block;
+}
+
+.cuspide p {
+	margin: 5px 0;
+}
+
+.cusp {
+	width: 35px;
+	margin-left: 5px;
+}
+
+#start, #filter {
+	margin-left: 10px;
+	width:200px;
+}
+
+#start {
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.string-block {
+	text-align: center;
+}
+
+.ruler {
+	text-align: center;
+}
+
+#from, #to {
+	width: 50px;
+}
+
+
+#filter {
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.progress-filter {
+	display: inline-block;
+	background-color: #800000;
+	width: 0vw;
+	height: 10px;
+	margin-top: 20px;
+}
+
+.results {
+	/*display: flex;*/
+	min-height: 20px;
+	padding: 5px;
+	cursor: pointer;
+	/*background-color: #DEDEDE;*/
+}
+
+#results-head.result-row {
+	width: calc(100% - 10px);
+	margin-left: 5px;
+	cursor: pointer;
+	margin-bottom: 0;
+}
+
+#results-head.result-row span:hover, #results-head.result-row.chosen {
+	background-color: #333333;
+}
+
+#results-head.fixed {
+	position: fixed;
+	top: 0;
+}
+
+.day-results {
+	height: 20px;
+	overflow: hidden;
+	background-color: #DEDEDE;
+}
+
+.day-results:hover {
+	border: 1px solid grey;
+}
+
+.day-results.active {
+	height: auto;
+	overflow: auto;
+	background-color: #EDEDED;
+}
+
+.result-row {
+	display: block;
+	margin-bottom: 5px;
+	border-bottom: 1px solid white;
+}
+
+.result-row.head {
+	background-color: #808080;
+	color: white;
+}
+
+.result-date {
+	font-size: 14px;
+	display: inline-block;
+	min-width: 70px;
+	border-right: 1px solid white;
+	text-align: center;
+}
+
+.result-degrees {
+	font-size: 15px;
+	display: inline-block;
+	min-width: 50px;
+	text-align: center;
+	border-right: 1px solid white;
+}
+
+.result-5house, .result-7house, .result-8house, .good-aspects, .bad-aspects, .sum-aspects, .angel-aspects, .love-aspects {
+	font-size: 14px;
+	display: inline-block;
+	min-width: 25px;
+	text-align: center;
+	border-right: 1px solid white;
+}
+
+.result-7house, .sum-aspects {
+	font-weight: bold;
+}
+
+.green-cell {
+	background-color: #85ff75;
+}
+
+.king {
+	color: green;
+}
+
+.devil {
+	color: red;
+}

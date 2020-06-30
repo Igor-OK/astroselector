@@ -98,10 +98,10 @@ const trustInput = document.getElementById('trust-container');
 
 //CLICK HANDLER
 function StarClicked(EO){
-   EO=EO||window.event;
-   var cla = EO.srcElement.className;
-   var con; // current container
-   var conStars; // last value of feature in curent container
+  EO=EO||window.event;
+  var cla = EO.srcElement.className;
+  var con; // current container
+  var conStars; // last value of feature in curent container
 
     if (cla[31] == "e")
       {con = emoContainer;
@@ -197,13 +197,16 @@ function allStars(){ // balancing of allstars
 
 $(function() {
       $('#form').submit(function(e) {
+
         var $form = $(this);
+
         $.ajax({
           type: $form.attr('method'),
           url: $form.attr('action'),
           data: $form.serialize()
         }).done(function() {
-         alert('Заявка успешно отправлена. Мы свяжемся с Вами в течение суток.');
+          console.log('done');
+         // alert('Заявка успешно отправлена. Мы свяжемся с Вами в течение суток.');
         }).fail(function() {
           alert('Что-то пошло не так, попробуйте отправить заявку еще раз.');
         });

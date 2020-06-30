@@ -105,6 +105,7 @@ var ModelH = {
   DataLoaded : function (data){
    // debugger;
       console.log('загруженные через AJAX данные:');
+      console.log(data['25.04.1986']);
       ModelH.days = data;
       //console.log(ModelH.days);
          ModelH.Nat_to_uni_GMT();
@@ -428,7 +429,7 @@ var ModelH = {
     }
     _end = _arr_end[0]+'.'+_arr_end[1]+'.'+_arr_end[2];
     console.log('!!!', _start,_end)
-      return [_start,_end];
+      return [_start,_end];                                                    // !!! 25.04.1986 26.04.1986
   }, //=================== end of GMT_uni_to_Request=====================
 
 
@@ -437,6 +438,7 @@ var ModelH = {
 
   //======= creating of array of longitudes, depending on exact time =======  // 360-0 TROUBLE WAS HERE
   Custom_arr : function(_min,_start,_end){
+    console.log('Custom_arr INPUT - ',_min,_start,_end)
     var natal_arr = [];
     var start = [];
     var end = [];
@@ -459,7 +461,7 @@ var ModelH = {
               natal_arr[i]-=360;
 
           } //end of else
-        }                                                                        // retro, if you wish, here // 1440 minutes in a day
+        }         console.log('Custom_arr OUTPUT - ',natal_arr);                                                                   // retro, if you wish, here // 1440 minutes in a day
       return (natal_arr);
   },//====================-end of custom_arr ==============================
 
@@ -539,7 +541,7 @@ var ModelH = {
 
   // =====Calculating of cuspids of houses in Placidus system
   Placidus_houses : function(star_time, lattitude){
-
+console.log(star_time, lattitude);
     const toRad = (degrees) => degrees / 180 * Math.PI;
     const toDeg = (radians) => radians * 180 / Math.PI;
 
@@ -560,8 +562,11 @@ var ModelH = {
 
     if (MC < 0)
       MC = MC + 180;  // Тут и ниже логика из  - Хэнд Р. Асцендент, МС и Вертекс в экстремальных широтах. // Российская астрология, 1996, №8, стр. 18.
-    if (Math.cos(RAMC*Math.PI/180) < 0)
+    if (Math.cos(RAMC*Math.PI/180) < 0){
+      console.log('cos('+ RAMC*Math.PI/180 +')');
+      console.log(Math.cos(RAMC*Math.PI/180));
       MC = MC + 180;
+    }
     console.log('MC = '+MC);
 
 
@@ -598,6 +603,8 @@ var ModelH = {
     function Placidus_iteration(d11, d12, d2, d3){ //arguments in RADIAN
       "use strict"
 
+      console.log('!', d11, d12, d2, d3);
+
       const funcA = (f, d) => f * Math.asin(Math.tan(lattitude) * Math.tan(d));
       const funcM = (a, h, d) => Math.atan(Math.sin(a) /  (Math.cos(h) * Math.tan(d)));
       const funcR = (h, m) => Math.atan( Math.tan(h) * Math.cos(m) / Math.cos(m + toRad(eDeg)) )
@@ -620,28 +627,27 @@ var ModelH = {
       const r2 = funcR(h2, m2);
       const r3 = funcR(h3, m3);
 
-// What is it about? mistake here?
-      // if(R11<0) R11+=180;
-      // if(R12<0) R12+=180;
-      // if(R2<0) R2+=180;
-      // if(R3<0) R3+=180;
-      // if (Math.cos(RAMC*Math.PI/180) < 0){ 
-      //   R11 +=180;
-      //   R12 +=180;
-      //   R2 += 180;
-      //   R3 += 180;
-      // }
-// What is it about? mistake here?
+      const define = (arg) => {
+        if (arg < 0) arg += Math.PI;
+        if (Math.cos(RAMC*Math.PI/180) < 0) arg += Math.PI;
+        return arg;
+      } 
+
+      const r11d = define(r11);
+      const r12d = define(r12);
+      const r2d = define(r2);
+      const r3d = define(r3);
 
 
-    console.log('11- '+r11);
-    console.log('12- '+r12);
-    console.log('2- '+r2);
-    console.log('3- '+r3);
 
-    return [r11, r12, r2, r3]
+      console.log('11: '+ r11 *180/Math.PI);
+      console.log('12: '+ r12 *180/Math.PI);
+      console.log('2: '+ r2 *180/Math.PI);
+      console.log('3: '+ r3 *180/Math.PI);
 
-  }// end of Placidus_iteration function
+      return [r11, r12, r2, r3]
+    }// end of Placidus_iteration function
+
 
     var R_iter_1 = Placidus_iteration(d11, d12, d2, d3);
     d11 = R_iter_1[0];
@@ -656,10 +662,11 @@ var ModelH = {
     d3 = R_iter_2[3]; 
 
     var R_iter_3 = Placidus_iteration(d11, d12, d2, d3);
-    console.log(' 11 дом - ' + toDeg(R_iter_3[0]) + ' градусов от куспида десятого'); 
-    console.log(' 12 дом - ' + toDeg(R_iter_3[1]) + ' градусов от куспида одиннадцатого'); 
-    console.log(' 2 дом - ' + toDeg(R_iter_3[2]) + ' градусов от асцендента'); 
-    console.log(' 3 дом - ' + toDeg(R_iter_3[3]) + ' градусов от второго'); 
+
+    console.log('11дом: ', toDeg(R_iter_3[0]) + MC ); 
+    console.log('12дом: ', toDeg(R_iter_3[1]) +  toDeg(R_iter_3[0]) + MC ); 
+    console.log('2дом: ', toDeg(R_iter_3[2]) + Asc); 
+    console.log('3дом: ', toDeg(R_iter_3[3]) + toDeg(R_iter_3[2]) + Asc); 
 
   },
   //====end of Placidus_houses
